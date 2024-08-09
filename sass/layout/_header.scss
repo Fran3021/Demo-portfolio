@@ -1,0 +1,73 @@
+.header-principal{
+    position: relative;
+    .circles{
+        position: absolute;
+        z-index: -1;
+        top: 125px;
+    }
+    .circle{
+        position: absolute;
+        right: 0;
+        top: 280px;
+    }
+    .header-profile{
+        margin-bottom: 40px;
+        padding-top: 20px;
+        width: 50%;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: linear-gradient(
+            to bottom,
+            rgba($black, 0.5),
+            rgba($dark-silver, 0.5)
+            );
+        h1{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 32px;
+        }
+        .socials{
+            ul{
+                display: flex;
+                justify-content: space-between;
+                gap: 25px;
+            }
+        }
+        .image-profile-mobile{
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+    .header-description{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        padding-bottom: 80px;
+        border-bottom: 1px solid $white;
+        h2{
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: bold;
+            text-align: center;
+            span{
+                border-bottom: 4px solid $beig;
+            }
+        }
+        p{
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 500;
+            text-align: center;
+        }
+        .button{
+            @include button;
+            border-bottom: 2px solid $beig;
+        }
+    }
+}

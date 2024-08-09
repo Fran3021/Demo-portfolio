@@ -1,0 +1,13 @@
+html * {
+    font-family: $primary-font;
+    color: $white;
+}
+
+body {
+    overflow-x: hidden;
+    background-color:$black;
+}
+
+* ul{
+    @include reset-list;
+}
