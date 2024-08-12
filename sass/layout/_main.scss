@@ -1,0 +1,129 @@
+.main-principal{
+    .circle-right{
+        position: absolute;
+        bottom: -61%;
+        right: 0;
+        @include breakpoint(tablet){
+            display: none;
+        }
+    }
+    .circle-hero-tablet{
+        display: none;
+        @include breakpoint(tablet){
+            display: block;
+            position: absolute;
+            bottom: -13%;
+            right: 0;
+        }
+    }
+    .skills{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        border-bottom: 1px solid $white;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        position: relative;
+        @include breakpoint(tablet){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            border-bottom: 0px;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1px;
+            @include breakpoint(tablet){
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 14px;
+            }
+            h3{
+                font-size: 32px;
+                line-height: 40px;
+                font-weight: bold;
+                @include breakpoint(tablet){
+                    font-size: 48px;
+                    line-height: 56px;
+                }
+            }
+            p{
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 500;
+                @include breakpoint (tablet){
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+    .projects{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        .header-projects{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            h2{
+                font-size: 40px;
+                line-height: 40px;
+                font-weight: bold;
+                @include breakpoint(tablet){
+                    font-size: 72px;
+                    line-height: 72px                
+                }
+            }
+            .button{
+                @include button;
+            }
+        }
+        .projects-description{
+            display: flex;
+            flex-direction: column;
+            gap: 42px;
+            @include breakpoint(tablet){
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                column-gap: 24px;
+                row-gap: 60px;
+            }
+            article{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                img{
+                    width: 100%;
+                }
+                h3{
+                    font-size: 24px;
+                    line-height: 32px;
+                    font-weight: bold;
+                }
+                .tecnologies{
+                    display: flex;
+                    gap: 18px;
+                    p{
+                        font-size: 18px;
+                        line-height: 28px;
+                        font-weight: 500;
+                    }
+                }
+                .options{
+                    ul{
+                        display: flex;
+                        gap: 30px;
+                        .button{
+                            @include button;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

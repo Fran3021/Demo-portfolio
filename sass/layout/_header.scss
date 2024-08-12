@@ -1,14 +1,39 @@
 .header-principal{
     position: relative;
+    .image-profile-tablet{
+        display: none;
+        @include breakpoint (tablet){
+            display: block;
+            width: 45%;
+            position: absolute;
+            right: 0;
+            z-index: -1;
+        }
+    }
     .circles{
         position: absolute;
         z-index: -1;
-        top: 125px;
+        top: 15%;
+        @include breakpoint(tablet){
+            display: none;
+        }
+    }
+    .circles-header-tablet{
+        display: none;
+        @include breakpoint(tablet){
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 10%;
+        }
     }
     .circle{
         position: absolute;
         right: 0;
-        top: 280px;
+        top: 35%;
+        @include breakpoint(tablet){
+            top: 71%;
+        }
     }
     .header-profile{
         margin-bottom: 40px;
@@ -30,6 +55,9 @@
             font-weight: bold;
             font-size: 24px;
             line-height: 32px;
+            @include breakpoint(tablet){
+                font-size: 32px;
+            }
         }
         .socials{
             ul{
@@ -41,6 +69,17 @@
         .image-profile-mobile{
             margin-top: 30px;
             width: 100%;
+            @include breakpoint(tablet){
+                display: none;
+            }
+        }
+        @include breakpoint(tablet){
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-image: none;
+            margin-bottom: 90px;
         }
     }
     .header-description{
@@ -50,13 +89,30 @@
         align-items: center;
         padding-bottom: 80px;
         border-bottom: 1px solid $white;
+        @include breakpoint(tablet){
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-bottom: 100px;
+        }
         h2{
             font-size: 40px;
             line-height: 40px;
             font-weight: bold;
             text-align: center;
+            @include breakpoint(tablet){
+                font-size: 72px;
+                line-height: 72px;
+                width: 70%;
+                text-align: left;
+                margin-bottom: 60px;
+            }
             span{
                 border-bottom: 4px solid $beig;
+                @include breakpoint(tablet){
+                    border-bottom: 5px solid $beig;
+                }
             }
         }
         p{
@@ -64,10 +120,14 @@
             line-height: 28px;
             font-weight: 500;
             text-align: center;
+            @include breakpoint(tablet){
+                text-align: left;
+                width: 60%;
+                margin-bottom: 34px
+            }
         }
         .button{
             @include button;
-            border-bottom: 2px solid $beig;
         }
     }
 }

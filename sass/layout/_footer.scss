@@ -1,0 +1,145 @@
+.footer-principal{
+    background-color: $dark-silver;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+    .circle-footer{
+        position: absolute;
+        bottom: 33%;
+        @include breakpoint(tablet){
+            display: none;
+        }
+    }
+    .circle-footer-tablet{
+        display: none;
+        @include breakpoint(tablet){
+            display: block;
+            position: absolute;
+            bottom: 21%;
+        }
+    }
+    .formulario-footer{
+        @include breakpoint(tablet){
+            width: 65%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .contact{
+            text-align: center;
+            margin-bottom: 50px;
+            h2{
+                font-size: 40px;
+                line-height: 40px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                @include breakpoint(tablet){
+                    font-size: 72px;
+                    line-height: 72px;
+                }
+            }
+            p{
+                font-size: 17px;
+                line-height: 26px;
+                font-weight: 500;
+                @include breakpoint(tablet){
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+        }
+        .formulario{
+            padding-bottom: 87px;
+            border-bottom: 1px solid $white;
+            margin-bottom: 39px;
+            @include breakpoint(tablet){
+                border: 0;
+            }
+            .name{
+                width: 100%;
+                border: 0;
+                background-color: $dark-silver;
+                padding-bottom: 17px;
+                padding-left: 24px;
+                border-bottom: 1px solid $white;
+                margin-bottom: 32px;
+                &::placeholder{
+                    color: #919191;
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 500;
+                }
+            }
+            .email{
+                width: 100%;
+                border: 0;
+                background-color: $dark-silver;
+                padding-bottom: 17px;
+                padding-left: 24px;
+                border-bottom: 1px solid $white;
+                margin-bottom: 32px;
+                &::placeholder{
+                    color: #919191;
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 500;
+                }
+            }
+            .message{
+                width: 100%;
+                border: 0;
+                background-color: $dark-silver;
+                padding-bottom: 81px;
+                padding-left: 24px;
+                border-bottom: 1px solid $white;
+                margin-bottom: 32px;
+                &::placeholder{
+                    color: #919191;
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 500;
+                }
+            }
+            .container-submit{
+                display: flex;
+                justify-content: flex-end;
+                .button{
+                    background-color: $dark-silver;
+                    border: 0;
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: $white;
+                    border-bottom: 2px solid $beig;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+    .socials-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        @include breakpoint(tablet){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-top: 1px solid $white;
+            padding-top: 30px;
+        }
+        h3{
+            font-size: 24px;
+            line-height: 32px;
+            @include breakpoint(tablet){
+                font-size: 32px;
+                line-height: 32px;
+            }
+        }
+        nav{
+            ul{
+                display: flex;
+                gap: 25px;
+            }
+        }
+    }
+}

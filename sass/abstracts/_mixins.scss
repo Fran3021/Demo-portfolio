@@ -40,8 +40,10 @@
 @mixin button {
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 26px;
   display: inline-block;
   width: max-content;
+  padding-bottom: 10px;
+  border-bottom: 2px solid $beig;
 }
