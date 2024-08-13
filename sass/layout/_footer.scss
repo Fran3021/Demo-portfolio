@@ -17,6 +17,18 @@
             position: absolute;
             bottom: 21%;
         }
+        @include breakpoint(desktopxl){
+            display: none;
+        }
+    }
+    .circle-footer-desktop{
+        display: none;
+        @include breakpoint(desktopxl){
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 30%;
+        }
     }
     .formulario-footer{
         @include breakpoint(tablet){
@@ -24,9 +36,20 @@
             margin-left: auto;
             margin-right: auto;
         }
+        @include breakpoint(desktopxl){
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 40px;
+        }
         .contact{
             text-align: center;
             margin-bottom: 50px;
+            @include breakpoint(desktopxl){
+                width: 39%;
+                text-align: left;
+                margin-bottom: 0;
+            }
             h2{
                 font-size: 40px;
                 line-height: 40px;
@@ -35,6 +58,11 @@
                 @include breakpoint(tablet){
                     font-size: 72px;
                     line-height: 72px;
+                }
+                @include breakpoint(desktopxl){
+                    font-size: 88px;
+                    line-height: 88px;
+                    margin-bottom: 36px;
                 }
             }
             p{
@@ -54,6 +82,9 @@
             @include breakpoint(tablet){
                 border: 0;
             }
+            @include breakpoint(desktopxl){
+                width: 41%;
+            }
             .name{
                 width: 100%;
                 border: 0;
@@ -67,6 +98,12 @@
                     font-size: 16px;
                     line-height: 26px;
                     font-weight: 500;
+                }
+                @include breakpoint(desktopxl){
+                    &:focus{
+                        outline: none;
+                        border-bottom: 1px solid $beig;
+                    }
                 }
             }
             .email{
@@ -83,6 +120,12 @@
                     line-height: 26px;
                     font-weight: 500;
                 }
+                @include breakpoint(desktopxl){
+                    &:focus{
+                        outline: none;
+                        border-bottom: 1px solid $beig;
+                    }
+                }
             }
             .message{
                 width: 100%;
@@ -98,6 +141,12 @@
                     line-height: 26px;
                     font-weight: 500;
                 }
+                @include breakpoint(desktopxl){
+                    &:focus{
+                        outline: none;
+                        border-bottom: 1px solid $beig;
+                    }
+                }
             }
             .container-submit{
                 display: flex;
@@ -110,6 +159,12 @@
                     color: $white;
                     border-bottom: 2px solid $beig;
                     padding-bottom: 10px;
+                    @include breakpoint(desktopxl){
+                        &:hover{
+                            color: $beig;
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
         }
@@ -127,6 +182,9 @@
             border-top: 1px solid $white;
             padding-top: 30px;
         }
+        @include breakpoint(desktop){
+            padding-top: 47px;
+        }
         h3{
             font-size: 24px;
             line-height: 32px;
@@ -139,6 +197,12 @@
             ul{
                 display: flex;
                 gap: 25px;
+                img{
+                    @include breakpoint(desktop){
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
             }
         }
     }

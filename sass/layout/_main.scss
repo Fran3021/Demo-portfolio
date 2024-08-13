@@ -15,6 +15,19 @@
             bottom: -13%;
             right: 0;
         }
+        @include breakpoint(desktop){
+            display: none;
+        }
+    }
+    .circle-hero-desktop{
+        display: none;
+        @include breakpoint(desktopxl){
+            display: block;
+            position: absolute;
+            z-index: -1;
+            right: 0;
+            bottom: 13%;
+        }
     }
     .skills{
         display: flex;
@@ -29,6 +42,13 @@
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
             border-bottom: 0px;
+        }
+        @include breakpoint(desktopxl){
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            row-gap: 58px;
+            column-gap: 30px;
         }
         section{
             display: flex;
@@ -69,6 +89,9 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 40px;
+            @include breakpoint(desktopxl){
+                margin-bottom: 80px;
+            }
             h2{
                 font-size: 40px;
                 line-height: 40px;
@@ -77,9 +100,19 @@
                     font-size: 72px;
                     line-height: 72px                
                 }
+                @include breakpoint(desktopxl){
+                    font-size: 88px;
+                    line-height: 88px
+                }
             }
             .button{
                 @include button;
+                @include breakpoint(desktopxl){
+                    &:hover{
+                        color: $beig;
+                        cursor: pointer;
+                    }
+                }
             }
         }
         .projects-description{
@@ -93,12 +126,32 @@
                 column-gap: 24px;
                 row-gap: 60px;
             }
-            article{
+            @include breakpoint(desktopxl){
+                column-gap: 30px;
+                row-gap: 69px;
+            }
+            .portfolio{
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
-                img{
+                position: relative;
+                .image-portfolio-mobile{
                     width: 100%;
+                    @include breakpoint(desktopxl){
+                        display: none;
+                    }
+                }
+                .image-portfolio-desktop{
+                    display: none;
+                    @include breakpoint(desktopxl){
+                        display: block;
+                        width: 100%;
+                        &:hover{
+                            filter: brightness(30%);
+                            cursor:pointer;
+                            z-index: -1;
+                        }
+                    }
                 }
                 h3{
                     font-size: 24px;
@@ -118,8 +171,339 @@
                     ul{
                         display: flex;
                         gap: 30px;
+                        @include breakpoint(desktopxl){
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px; 
+                        }
                         .button{
                             @include button;
+                            @include breakpoint(desktopxl){
+                                &:hover{
+                                    color: $beig;
+                                }
+                            }
+                        }
+                    }
+                    @include breakpoint(desktopxl){
+                        position: absolute;
+                        top: 30%;
+                        left: 40%;
+                        z-index: -1;
+                        &:hover{
+                            z-index: 0;
+                        }
+                    }
+                }
+            }
+            .landing-page{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                position: relative;
+                .image-landin-page-mobile{
+                    width: 100%;
+                    @include breakpoint(desktopxl){
+                        display: none;
+                    }
+                }
+                .image-landin-page-desktop{
+                    display: none;
+                    @include breakpoint(desktopxl){
+                        display: block;
+                        width: 100%;
+                        &:hover{
+                            filter: brightness(30%);
+                            cursor: pointer;
+                            z-index: -1;
+                        }
+                    }
+                }
+                h3{
+                    font-size: 24px;
+                    line-height: 32px;
+                    font-weight: bold;
+                }
+                .tecnologies{
+                    display: flex;
+                    gap: 18px;
+                    p{
+                        font-size: 18px;
+                        line-height: 28px;
+                        font-weight: 500;
+                    }
+                }
+                .options{
+                    ul{
+                        display: flex;
+                        gap: 30px;
+                        @include breakpoint(desktopxl){
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px; 
+                        }
+                        .button{
+                            @include button;
+                            cursor: pointer;
+                        }
+                    }
+                    @include breakpoint(desktopxl){
+                        position: absolute;
+                        top: 30%;
+                        left: 40%;
+                        z-index: -1;
+                        &:hover{
+                            z-index: 0;
+                        }
+                    }
+                }
+            }
+            .todo-web{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                position: relative;
+                .image-todo-mobile{
+                    width: 100%;
+                    @include breakpoint(desktopxl){
+                        display: none;
+                    }
+                }
+                .image-todo-desktop{
+                    display: none;
+                    @include breakpoint(desktopxl){
+                        display: block;
+                        width: 100%;
+                        &:hover{
+                            filter: brightness(30%);
+                            z-index: -1;
+                        }
+                    }
+                }
+                h3{
+                    font-size: 24px;
+                    line-height: 32px;
+                    font-weight: bold;
+                }
+                .tecnologies{
+                    display: flex;
+                    gap: 18px;
+                    p{
+                        font-size: 18px;
+                        line-height: 28px;
+                        font-weight: 500;
+                    }
+                }
+                .options{
+                    ul{
+                        display: flex;
+                        gap: 30px;
+                        @include breakpoint(desktopxl){
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px; 
+                        }
+                        .button{
+                            @include button;
+                            cursor: pointer;
+                        }
+                    }
+                    @include breakpoint(desktopxl){
+                        position: absolute;
+                        top: 30%;
+                        left: 40%;
+                        z-index: -1;
+                        &:hover{
+                            z-index: 0;
+                        }
+                    }
+                }
+            }
+            .entertainment{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                position: relative;
+                .image-entertainment-mobile{
+                    width: 100%;
+                    @include breakpoint(desktopxl){
+                        display: none;
+                    }
+                }
+                .image-entertainment-desktop{
+                    display: none;
+                    @include breakpoint(desktopxl){
+                        display: block;
+                        width: 100%;
+                        &:hover{
+                            filter: brightness(30%);
+                            z-index: -1;
+                        }
+                    }
+                }
+                h3{
+                    font-size: 24px;
+                    line-height: 32px;
+                    font-weight: bold;
+                }
+                .tecnologies{
+                    display: flex;
+                    gap: 18px;
+                    p{
+                        font-size: 18px;
+                        line-height: 28px;
+                        font-weight: 500;
+                    }
+                }
+                .options{
+                    ul{
+                        display: flex;
+                        gap: 30px;
+                        @include breakpoint(desktopxl){
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px; 
+                        }
+                        .button{
+                            @include button;
+                            cursor: pointer;
+                        }
+                    }
+                    @include breakpoint(desktopxl){
+                        position: absolute;
+                        top: 30%;
+                        left: 40%;
+                        z-index: -1;
+                        &:hover{
+                            z-index: 0;
+                        }
+                    }
+                }
+            }
+            .memory{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                position: relative;
+                .image-memorygame-mobile{
+                    width: 100%;
+                    @include breakpoint(desktopxl){
+                        display: none;
+                    }
+                }
+                .image-memorygame-desktop{
+                    display: none;
+                    @include breakpoint(desktopxl){
+                        display: block;
+                        width: 100%;
+                        &:hover{
+                            filter: brightness(30%);
+                            z-index: -1;
+                        }
+                    }
+                }
+                h3{
+                    font-size: 24px;
+                    line-height: 32px;
+                    font-weight: bold;
+                }
+                .tecnologies{
+                    display: flex;
+                    gap: 18px;
+                    p{
+                        font-size: 18px;
+                        line-height: 28px;
+                        font-weight: 500;
+                    }
+                }
+                .options{
+                    ul{
+                        display: flex;
+                        gap: 30px;
+                        @include breakpoint(desktopxl){
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px; 
+                        }
+                        .button{
+                            @include button;
+                            cursor: pointer;
+                        }
+                    }
+                    @include breakpoint(desktopxl){
+                        position: absolute;
+                        top: 30%;
+                        left: 40%;
+                        z-index: -1;
+                        &:hover{
+                            z-index: 0;
+                        }
+                    }
+                }
+            }
+            .gallery-show-case{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                position: relative;
+                .image-showcase-mobile{
+                    width: 100%;
+                    @include breakpoint(desktopxl){
+                        display: none;
+                    }
+                }
+                .image-showcase-desktop{
+                    display: none;
+                    @include breakpoint(desktopxl){
+                        display: block;
+                        width: 100%;
+                        &:hover{
+                            filter: brightness(30%);
+                            z-index: -1;
+                        }
+                    }
+                }
+                h3{
+                    font-size: 24px;
+                    line-height: 32px;
+                    font-weight: bold;
+                }
+                .tecnologies{
+                    display: flex;
+                    gap: 18px;
+                    p{
+                        font-size: 18px;
+                        line-height: 28px;
+                        font-weight: 500;
+                    }
+                }
+                .options{
+                    ul{
+                        display: flex;
+                        gap: 30px;
+                        @include breakpoint(desktopxl){
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px; 
+                        }
+                        .button{
+                            @include button;
+                            cursor: pointer;
+                        }
+                    }
+                    @include breakpoint(desktopxl){
+                        position: absolute;
+                        top: 30%;
+                        left: 40%;
+                        z-index: -1;
+                        &:hover{
+                            z-index: 0;
                         }
                     }
                 }
