@@ -99,6 +99,10 @@
                     line-height: 26px;
                     font-weight: 500;
                 }
+                &:focus{
+                    outline: none;
+                    border-bottom: 1px solid $beig;
+                }
                 @include breakpoint(desktopxl){
                     &:focus{
                         outline: none;
@@ -120,6 +124,10 @@
                     line-height: 26px;
                     font-weight: 500;
                 }
+                &:focus{
+                    outline: none;
+                    border-bottom: 1px solid $beig;
+                }
                 @include breakpoint(desktopxl){
                     &:focus{
                         outline: none;
@@ -140,6 +148,10 @@
                     font-size: 16px;
                     line-height: 26px;
                     font-weight: 500;
+                }
+                &:focus{
+                    outline: none;
+                    border-bottom: 1px solid $beig;
                 }
                 @include breakpoint(desktopxl){
                     &:focus{

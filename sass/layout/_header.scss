@@ -28,6 +28,9 @@
             right:10%;
             z-index: -1;
         }
+        @include breakpoint(desktopxxl){
+            width: 25%;
+        }
     }
     .circles-header-mobile{
         position: absolute;
@@ -76,6 +79,9 @@
             position: absolute;
             right: 36.5%;
             bottom: 20%;
+        }
+        @include breakpoint(desktopxxl){
+            right: 32%;
         }
     }
     .header-profile{
