@@ -130,23 +130,15 @@
                 column-gap: 30px;
                 row-gap: 69px;
             }
-            .portfolio{
+            .portfolio-mobile{
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
-                position: relative;
+                @include breakpoint(desktopxl){
+                    display: none;
+                }
                 .image-portfolio-mobile{
                     width: 100%;
-                    @include breakpoint(desktopxl){
-                        display: none;
-                    }
-                }
-                .image-portfolio-desktop{
-                    display: none;
-                    @include breakpoint(desktopxl){
-                        display: block;
-                        width: 100%;
-                    }
                 }
                 h3{
                     font-size: 24px;
@@ -167,54 +159,75 @@
                     gap: 30px;
                     .button{
                         @include button;
-                        @include breakpoint(desktopxl){
-                            &:hover{
-                                color: $beig;
-                            }
-                        }
-                    }
-                    @include breakpoint(desktopxl){
-                        width: 100%;
-                        height: 80.7%;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 60px;
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        background-color: rgba(0, 0, 0, 0.7);
-                        opacity: 0;
-                        transition: opacity 0.5s ease;
-                        &:hover{
-                            opacity: 1;
-                            cursor: pointer;
-                        }
-                    }
-                    @include breakpoint(desktopxxl){
-                        height: 85%;
                     }
                 }
             }
-            .landing-page{
+            .portfolio-desktop{
+                display: none;
+                @include breakpoint(desktopxl){
+                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .image-options-desktop{
+                        position: relative;
+                        .image-portfolio-desktop{
+                            width: 100%;
+                        }
+                        .options{
+                            display: flex;
+                            gap: 30px;
+                            width: 100%;
+                            height: 100%;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: rgba(0, 0, 0, 0.7);
+                            opacity: 0;
+                            transition: opacity 0.5s ease;
+                            &:hover{
+                                opacity: 1;
+                                cursor: pointer;
+                            }
+                            .button{
+                                @include button;
+                                &:hover{
+                                    color: $beig;
+                                }
+                            }
+                        }
+                    }
+                    h3{
+                        font-size: 24px;
+                        line-height: 32px;
+                        font-weight: bold;
+                    }
+                    .tecnologies{
+                        display: flex;
+                        gap: 18px;
+                        p{
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            .landin-page-mobile{
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
-                position: relative;
+                @include breakpoint(desktopxl){
+                    display: none;
+                }
                 .image-landin-page-mobile{
                     width: 100%;
-                    @include breakpoint(desktopxl){
-                        display: none;
-                    }
-                }
-                .image-landin-page-desktop{
-                    display: none;
-                    @include breakpoint(desktopxl){
-                        display: block;
-                        width: 100%;
-                    }
                 }
                 h3{
                     font-size: 24px;
@@ -235,54 +248,75 @@
                     gap: 30px;
                     .button{
                         @include button;
-                        @include breakpoint(desktopxl){
-                            &:hover{
-                                color: $beig;
-                            }
-                        }
-                    }
-                    @include breakpoint(desktopxl){
-                        width: 100%;
-                        height:80.7%;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 60px;
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        background-color: rgba(0, 0, 0, 0.7);
-                        opacity: 0;
-                        transition: opacity 0.5s ease;
-                        &:hover{
-                            opacity: 1;
-                            cursor: pointer;
-                        }
-                    }
-                    @include breakpoint(desktopxxl){
-                        height: 85%;
                     }
                 }
             }
-            .todo-web{
+            .landin-page-desktop{
+                display: none;
+                @include breakpoint(desktopxl){
+                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .image-options-desktop{
+                        position: relative;
+                        .image-landin-page-desktop{
+                            width: 100%;
+                        }
+                        .options{
+                            display: flex;
+                            gap: 30px;
+                            width: 100%;
+                            height: 100%;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: rgba(0, 0, 0, 0.7);
+                            opacity: 0;
+                            transition: opacity 0.5s ease;
+                            &:hover{
+                                opacity: 1;
+                                cursor: pointer;
+                            }
+                            .button{
+                                @include button;
+                                &:hover{
+                                    color: $beig;
+                                }
+                            }
+                        }
+                    }
+                    h3{
+                        font-size: 24px;
+                        line-height: 32px;
+                        font-weight: bold;
+                    }
+                    .tecnologies{
+                        display: flex;
+                        gap: 18px;
+                        p{
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            .todo-web-mobile{
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
-                position: relative;
+                @include breakpoint(desktopxl){
+                    display: none;
+                }
                 .image-todo-mobile{
                     width: 100%;
-                    @include breakpoint(desktopxl){
-                        display: none;
-                    }
-                }
-                .image-todo-desktop{
-                    display: none;
-                    @include breakpoint(desktopxl){
-                        display: block;
-                        width: 100%;
-                    }
                 }
                 h3{
                     font-size: 24px;
@@ -303,54 +337,75 @@
                     gap: 30px;
                     .button{
                         @include button;
-                        @include breakpoint(desktopxl){
-                            &:hover{
-                                color: $beig;
-                            }
-                        }
-                    }
-                    @include breakpoint(desktopxl){
-                        width: 100%;
-                        height:80.7%;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 60px;
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        background-color: rgba(0, 0, 0, 0.7);
-                        opacity: 0;
-                        transition: opacity 0.5s ease;
-                        &:hover{
-                            opacity: 1;
-                            cursor: pointer;
-                        }
-                    }
-                    @include breakpoint(desktopxxl){
-                        height: 85%;
                     }
                 }
             }
-            .entertainment{
+            .todo-web-desktop{
+                display: none;
+                @include breakpoint(desktopxl){
+                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .image-options-desktop{
+                        position: relative;
+                        .image-todo-desktop{
+                            width: 100%;
+                        }
+                        .options{
+                            display: flex;
+                            gap: 30px;
+                            width: 100%;
+                            height: 100%;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: rgba(0, 0, 0, 0.7);
+                            opacity: 0;
+                            transition: opacity 0.5s ease;
+                            &:hover{
+                                opacity: 1;
+                                cursor: pointer;
+                            }
+                            .button{
+                                @include button;
+                                &:hover{
+                                    color: $beig;
+                                }
+                            }
+                        }
+                    }
+                    h3{
+                        font-size: 24px;
+                        line-height: 32px;
+                        font-weight: bold;
+                    }
+                    .tecnologies{
+                        display: flex;
+                        gap: 18px;
+                        p{
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            .entertainment-mobile{
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
-                position: relative;
+                @include breakpoint(desktopxl){
+                    display: none;
+                }
                 .image-entertainment-mobile{
                     width: 100%;
-                    @include breakpoint(desktopxl){
-                        display: none;
-                    }
-                }
-                .image-entertainment-desktop{
-                    display: none;
-                    @include breakpoint(desktopxl){
-                        display: block;
-                        width: 100%;
-                    }
                 }
                 h3{
                     font-size: 24px;
@@ -371,54 +426,75 @@
                     gap: 30px;
                     .button{
                         @include button;
-                        @include breakpoint(desktopxl){
-                            &:hover{
-                                color: $beig;
-                            }
-                        }
-                    }
-                    @include breakpoint(desktopxl){
-                        width: 100%;
-                        height:80.7%;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 60px;
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        background-color: rgba(0, 0, 0, 0.7);
-                        opacity: 0;
-                        transition: opacity 0.5s ease;
-                        &:hover{
-                            opacity: 1;
-                            cursor: pointer;
-                        }
-                    }
-                    @include breakpoint(desktopxxl){
-                        height: 85%;
                     }
                 }
             }
-            .memory{
+            .entertainment-desktop{
+                display: none;
+                @include breakpoint(desktopxl){
+                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .image-options-desktop{
+                        position: relative;
+                        .image-entertainment-desktop{
+                            width: 100%;
+                        }
+                        .options{
+                            display: flex;
+                            gap: 30px;
+                            width: 100%;
+                            height: 100%;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: rgba(0, 0, 0, 0.7);
+                            opacity: 0;
+                            transition: opacity 0.5s ease;
+                            &:hover{
+                                opacity: 1;
+                                cursor: pointer;
+                            }
+                            .button{
+                                @include button;
+                                &:hover{
+                                    color: $beig;
+                                }
+                            }
+                        }
+                    }
+                    h3{
+                        font-size: 24px;
+                        line-height: 32px;
+                        font-weight: bold;
+                    }
+                    .tecnologies{
+                        display: flex;
+                        gap: 18px;
+                        p{
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            .memory-mobile{
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
-                position: relative;
+                @include breakpoint(desktopxl){
+                    display: none;
+                }
                 .image-memorygame-mobile{
                     width: 100%;
-                    @include breakpoint(desktopxl){
-                        display: none;
-                    }
-                }
-                .image-memorygame-desktop{
-                    display: none;
-                    @include breakpoint(desktopxl){
-                        display: block;
-                        width: 100%;
-                    }
                 }
                 h3{
                     font-size: 24px;
@@ -439,54 +515,75 @@
                     gap: 30px;
                     .button{
                         @include button;
-                        @include breakpoint(desktopxl){
-                            &:hover{
-                                color: $beig;
-                            }
-                        }
-                    }
-                    @include breakpoint(desktopxl){
-                        width: 100%;
-                        height:80.7%;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 60px;
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        background-color: rgba(0, 0, 0, 0.7);
-                        opacity: 0;
-                        transition: opacity 0.5s ease;
-                        &:hover{
-                            opacity: 1;
-                            cursor: pointer;
-                        }
-                    }
-                    @include breakpoint(desktopxxl){
-                        height: 85%;
                     }
                 }
             }
-            .gallery-show-case{
+            .memory-desktop{
+                display: none;
+                @include breakpoint(desktopxl){
+                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .image-options-desktop{
+                        position: relative;
+                        .image-memorygame-desktop{
+                            width: 100%;
+                        }
+                        .options{
+                            display: flex;
+                            gap: 30px;
+                            width: 100%;
+                            height: 100%;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: rgba(0, 0, 0, 0.7);
+                            opacity: 0;
+                            transition: opacity 0.5s ease;
+                            &:hover{
+                                opacity: 1;
+                                cursor: pointer;
+                            }
+                            .button{
+                                @include button;
+                                &:hover{
+                                    color: $beig;
+                                }
+                            }
+                        }
+                    }
+                    h3{
+                        font-size: 24px;
+                        line-height: 32px;
+                        font-weight: bold;
+                    }
+                    .tecnologies{
+                        display: flex;
+                        gap: 18px;
+                        p{
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            .gallery-show-case-mobile{
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
-                position: relative;
+                @include breakpoint(desktopxl){
+                    display: none;
+                }
                 .image-showcase-mobile{
                     width: 100%;
-                    @include breakpoint(desktopxl){
-                        display: none;
-                    }
-                }
-                .image-showcase-desktop{
-                    display: none;
-                    @include breakpoint(desktopxl){
-                        display: block;
-                        width: 100%;
-                    }
                 }
                 h3{
                     font-size: 24px;
@@ -507,34 +604,63 @@
                     gap: 30px;
                     .button{
                         @include button;
-                        @include breakpoint(desktopxl){
+                    }
+                }
+            }
+            .gallery-show-case-desktop{
+                display: none;
+                @include breakpoint(desktopxl){
+                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .image-options-desktop{
+                        position: relative;
+                        .image-showcase-desktop{
+                            width: 100%;
+                        }
+                        .options{
+                            display: flex;
+                            gap: 30px;
+                            width: 100%;
+                            height: 100%;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: rgba(0, 0, 0, 0.7);
+                            opacity: 0;
+                            transition: opacity 0.5s ease;
                             &:hover{
-                                color: $beig;
+                                opacity: 1;
+                                cursor: pointer;
+                            }
+                            .button{
+                                @include button;
+                                &:hover{
+                                    color: $beig;
+                                }
                             }
                         }
                     }
-                    @include breakpoint(desktopxl){
-                        width: 100%;
-                        height:80.7%;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 60px;
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        background-color: rgba(0, 0, 0, 0.7);
-                        opacity: 0;
-                        transition: opacity 0.5s ease;
-                        &:hover{
-                            opacity: 1;
-                            cursor: pointer;
-                        }
+                    h3{
+                        font-size: 24px;
+                        line-height: 32px;
+                        font-weight: bold;
                     }
-                    @include breakpoint(desktopxxl){
-                        height: 85%;
+                    .tecnologies{
+                        display: flex;
+                        gap: 18px;
+                        p{
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-weight: 500;
+                        }
                     }
                 }
             }
