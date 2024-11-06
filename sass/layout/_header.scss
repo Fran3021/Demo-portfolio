@@ -1,0 +1,217 @@
+.header-principal{
+    position: relative;
+    .image-profile-tablet{
+        display: none;
+        @include breakpoint (tablet){
+            display: block;
+            width: 45%;
+            position: absolute;
+            right: 0;
+            z-index: -1;
+        }
+        @include breakpoint(tablethorizontal){
+            width: 35%;
+        }
+        @include breakpoint(desktop){
+            width: 30%;
+        }
+        @include breakpoint(desktopxl){
+            display: none;
+        }
+    }
+    .image-profile-desktop{
+        display: none;
+        @include breakpoint(desktopxl){
+            display: block;
+            position: absolute;
+            width: 31%;
+            right:10%;
+            z-index: -1;
+        }
+        @include breakpoint(desktopxxl){
+            width: 25%;
+        }
+    }
+    .circles-header-mobile{
+        position: absolute;
+        z-index: -1;
+        top: 15%;
+        @include breakpoint(tablet){
+            display: none;
+        }
+    }
+    .circles-header-tablet{
+        display: none;
+        @include breakpoint(tablet){
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 10%;
+        }
+        @include breakpoint(desktopxl){
+            display: none;
+        }
+    }
+    .circles-header-desktop{
+        display: none;
+        @include breakpoint(desktopxl){
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 10%;
+        }
+    }
+    .circle-mobile{
+        position: absolute;
+        right: 0;
+        top: 35%;
+        @include breakpoint(tablet){
+            top: 71%;
+        }
+        @include breakpoint(desktopxl){
+            display: none;
+        }
+    }
+    .circle-desktop{
+        display: none;
+        @include breakpoint(desktopxl){
+            display: block;
+            position: absolute;
+            right: 36.5%;
+            bottom: 20%;
+        }
+        @include breakpoint(desktopxxl){
+            right: 32%;
+        }
+    }
+    .header-profile{
+        margin-bottom: 40px;
+        padding-top: 20px;
+        width: 50%;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: linear-gradient(
+            to bottom,
+            rgba($black, 0.5),
+            rgba($dark-silver, 0.5)
+            );
+        h1{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 32px;
+            @include breakpoint(tablet){
+                font-size: 32px;
+            }
+        }
+        .socials{
+            ul{
+                display: flex;
+                justify-content: space-between;
+                gap: 25px;
+                @include breakpoint(desktopxl){
+                    gap: 32px;
+                    margin-right: 29px;
+                }
+                img{
+                    @include breakpoint(desktopxl){
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+        .image-profile-mobile{
+            margin-top: 30px;
+            width: 100%;
+            @include breakpoint(tablet){
+                display: none;
+            }
+        }
+        @include breakpoint(tablet){
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-image: none;
+            margin-bottom: 90px;
+        }
+    }
+    .header-description{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        padding-bottom: 80px;
+        border-bottom: 1px solid $white;
+        @include breakpoint(tablet){
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-bottom: 100px;
+        }
+        @include breakpoint(tablethorizontal){
+            padding-bottom: 200px;
+        }
+        @include breakpoint(desktopxl){
+            padding-bottom: 230px;
+        }
+        h2{
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: bold;
+            text-align: center;
+            @include breakpoint(tablet){
+                font-size: 72px;
+                line-height: 72px;
+                width: 70%;
+                text-align: left;
+                margin-bottom: 60px;
+            }
+            @include breakpoint(desktopxl){
+                font-size: 88px;
+                line-height: 88px;
+                font-weight: bold;
+                margin-bottom: 43px;
+            }
+            span{
+                border-bottom: 4px solid $beig;
+                @include breakpoint(tablet){
+                    border-bottom: 5px solid $beig;
+                }
+                @include breakpoint(desktopxl){
+                    border-bottom: 6px solid $beig;
+                }
+            }
+        }
+        p{
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 500;
+            text-align: center;
+            @include breakpoint(tablet){
+                text-align: left;
+                width: 60%;
+                margin-bottom: 34px
+            }
+            @include breakpoint(desktopxl){
+                width: 37%;
+                margin-bottom: 66px
+            }
+        }
+        .button{
+            @include button;
+            @include breakpoint(desktopxl){
+                &:hover{
+                    color: $beig;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,669 @@
+.main-principal{
+    .circle-right{
+        position: absolute;
+        bottom: -61%;
+        right: 0;
+        @include breakpoint(tablet){
+            display: none;
+        }
+    }
+    .circle-hero-tablet{
+        display: none;
+        @include breakpoint(tablet){
+            display: block;
+            position: absolute;
+            bottom: -13%;
+            right: 0;
+        }
+        @include breakpoint(desktop){
+            display: none;
+        }
+    }
+    .circle-hero-desktop{
+        display: none;
+        @include breakpoint(desktopxl){
+            display: block;
+            position: absolute;
+            z-index: -1;
+            right: 0;
+            bottom: 13%;
+        }
+    }
+    .skills{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        border-bottom: 1px solid $white;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        position: relative;
+        @include breakpoint(tablet){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            border-bottom: 0px;
+        }
+        @include breakpoint(desktopxl){
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            row-gap: 58px;
+            column-gap: 30px;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1px;
+            @include breakpoint(tablet){
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 14px;
+            }
+            h3{
+                font-size: 32px;
+                line-height: 40px;
+                font-weight: bold;
+                @include breakpoint(tablet){
+                    font-size: 48px;
+                    line-height: 56px;
+                }
+            }
+            p{
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 500;
+                @include breakpoint (tablet){
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+    .projects{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        .header-projects{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            @include breakpoint(desktopxl){
+                margin-bottom: 80px;
+            }
+            h2{
+                font-size: 40px;
+                line-height: 40px;
+                font-weight: bold;
+                @include breakpoint(tablet){
+                    font-size: 72px;
+                    line-height: 72px                
+                }
+                @include breakpoint(desktopxl){
+                    font-size: 88px;
+                    line-height: 88px
+                }
+            }
+            .button{
+                @include button;
+                @include breakpoint(desktopxl){
+                    &:hover{
+                        color: $beig;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .projects-description{
+            display: flex;
+            flex-direction: column;
+            gap: 42px;
+            @include breakpoint(tablet){
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                column-gap: 24px;
+                row-gap: 60px;
+            }
+            @include breakpoint(desktopxl){
+                column-gap: 30px;
+                row-gap: 69px;
+            }
+            .portfolio-mobile{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                @include breakpoint(desktopxl){
+                    display: none;
+                }
+                .image-portfolio-mobile{
+                    width: 100%;
+                }
+                h3{
+                    font-size: 24px;
+                    line-height: 32px;
+                    font-weight: bold;
+                }
+                .tecnologies{
+                    display: flex;
+                    gap: 18px;
+                    p{
+                        font-size: 18px;
+                        line-height: 28px;
+                        font-weight: 500;
+                    }
+                }
+                .options{
+                    display: flex;
+                    gap: 30px;
+                    .button{
+                        @include button;
+                    }
+                }
+            }
+            .portfolio-desktop{
+                display: none;
+                @include breakpoint(desktopxl){
+                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .image-options-desktop{
+                        position: relative;
+                        .image-portfolio-desktop{
+                            width: 100%;
+                        }
+                        .options{
+                            display: flex;
+                            gap: 30px;
+                            width: 100%;
+                            height: 100%;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: rgba(0, 0, 0, 0.7);
+                            opacity: 0;
+                            transition: opacity 0.5s ease;
+                            &:hover{
+                                opacity: 1;
+                                cursor: pointer;
+                            }
+                            .button{
+                                @include button;
+                                &:hover{
+                                    color: $beig;
+                                }
+                            }
+                        }
+                    }
+                    h3{
+                        font-size: 24px;
+                        line-height: 32px;
+                        font-weight: bold;
+                    }
+                    .tecnologies{
+                        display: flex;
+                        gap: 18px;
+                        p{
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            .landin-page-mobile{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                @include breakpoint(desktopxl){
+                    display: none;
+                }
+                .image-landin-page-mobile{
+                    width: 100%;
+                }
+                h3{
+                    font-size: 24px;
+                    line-height: 32px;
+                    font-weight: bold;
+                }
+                .tecnologies{
+                    display: flex;
+                    gap: 18px;
+                    p{
+                        font-size: 18px;
+                        line-height: 28px;
+                        font-weight: 500;
+                    }
+                }
+                .options{
+                    display: flex;
+                    gap: 30px;
+                    .button{
+                        @include button;
+                    }
+                }
+            }
+            .landin-page-desktop{
+                display: none;
+                @include breakpoint(desktopxl){
+                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .image-options-desktop{
+                        position: relative;
+                        .image-landin-page-desktop{
+                            width: 100%;
+                        }
+                        .options{
+                            display: flex;
+                            gap: 30px;
+                            width: 100%;
+                            height: 100%;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: rgba(0, 0, 0, 0.7);
+                            opacity: 0;
+                            transition: opacity 0.5s ease;
+                            &:hover{
+                                opacity: 1;
+                                cursor: pointer;
+                            }
+                            .button{
+                                @include button;
+                                &:hover{
+                                    color: $beig;
+                                }
+                            }
+                        }
+                    }
+                    h3{
+                        font-size: 24px;
+                        line-height: 32px;
+                        font-weight: bold;
+                    }
+                    .tecnologies{
+                        display: flex;
+                        gap: 18px;
+                        p{
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            .todo-web-mobile{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                @include breakpoint(desktopxl){
+                    display: none;
+                }
+                .image-todo-mobile{
+                    width: 100%;
+                }
+                h3{
+                    font-size: 24px;
+                    line-height: 32px;
+                    font-weight: bold;
+                }
+                .tecnologies{
+                    display: flex;
+                    gap: 18px;
+                    p{
+                        font-size: 18px;
+                        line-height: 28px;
+                        font-weight: 500;
+                    }
+                }
+                .options{
+                    display: flex;
+                    gap: 30px;
+                    .button{
+                        @include button;
+                    }
+                }
+            }
+            .todo-web-desktop{
+                display: none;
+                @include breakpoint(desktopxl){
+                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .image-options-desktop{
+                        position: relative;
+                        .image-todo-desktop{
+                            width: 100%;
+                        }
+                        .options{
+                            display: flex;
+                            gap: 30px;
+                            width: 100%;
+                            height: 100%;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: rgba(0, 0, 0, 0.7);
+                            opacity: 0;
+                            transition: opacity 0.5s ease;
+                            &:hover{
+                                opacity: 1;
+                                cursor: pointer;
+                            }
+                            .button{
+                                @include button;
+                                &:hover{
+                                    color: $beig;
+                                }
+                            }
+                        }
+                    }
+                    h3{
+                        font-size: 24px;
+                        line-height: 32px;
+                        font-weight: bold;
+                    }
+                    .tecnologies{
+                        display: flex;
+                        gap: 18px;
+                        p{
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            .entertainment-mobile{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                @include breakpoint(desktopxl){
+                    display: none;
+                }
+                .image-entertainment-mobile{
+                    width: 100%;
+                }
+                h3{
+                    font-size: 24px;
+                    line-height: 32px;
+                    font-weight: bold;
+                }
+                .tecnologies{
+                    display: flex;
+                    gap: 18px;
+                    p{
+                        font-size: 18px;
+                        line-height: 28px;
+                        font-weight: 500;
+                    }
+                }
+                .options{
+                    display: flex;
+                    gap: 30px;
+                    .button{
+                        @include button;
+                    }
+                }
+            }
+            .entertainment-desktop{
+                display: none;
+                @include breakpoint(desktopxl){
+                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .image-options-desktop{
+                        position: relative;
+                        .image-entertainment-desktop{
+                            width: 100%;
+                        }
+                        .options{
+                            display: flex;
+                            gap: 30px;
+                            width: 100%;
+                            height: 100%;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: rgba(0, 0, 0, 0.7);
+                            opacity: 0;
+                            transition: opacity 0.5s ease;
+                            &:hover{
+                                opacity: 1;
+                                cursor: pointer;
+                            }
+                            .button{
+                                @include button;
+                                &:hover{
+                                    color: $beig;
+                                }
+                            }
+                        }
+                    }
+                    h3{
+                        font-size: 24px;
+                        line-height: 32px;
+                        font-weight: bold;
+                    }
+                    .tecnologies{
+                        display: flex;
+                        gap: 18px;
+                        p{
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            .memory-mobile{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                @include breakpoint(desktopxl){
+                    display: none;
+                }
+                .image-memorygame-mobile{
+                    width: 100%;
+                }
+                h3{
+                    font-size: 24px;
+                    line-height: 32px;
+                    font-weight: bold;
+                }
+                .tecnologies{
+                    display: flex;
+                    gap: 18px;
+                    p{
+                        font-size: 18px;
+                        line-height: 28px;
+                        font-weight: 500;
+                    }
+                }
+                .options{
+                    display: flex;
+                    gap: 30px;
+                    .button{
+                        @include button;
+                    }
+                }
+            }
+            .memory-desktop{
+                display: none;
+                @include breakpoint(desktopxl){
+                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .image-options-desktop{
+                        position: relative;
+                        .image-memorygame-desktop{
+                            width: 100%;
+                        }
+                        .options{
+                            display: flex;
+                            gap: 30px;
+                            width: 100%;
+                            height: 100%;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: rgba(0, 0, 0, 0.7);
+                            opacity: 0;
+                            transition: opacity 0.5s ease;
+                            &:hover{
+                                opacity: 1;
+                                cursor: pointer;
+                            }
+                            .button{
+                                @include button;
+                                &:hover{
+                                    color: $beig;
+                                }
+                            }
+                        }
+                    }
+                    h3{
+                        font-size: 24px;
+                        line-height: 32px;
+                        font-weight: bold;
+                    }
+                    .tecnologies{
+                        display: flex;
+                        gap: 18px;
+                        p{
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            .gallery-show-case-mobile{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                @include breakpoint(desktopxl){
+                    display: none;
+                }
+                .image-showcase-mobile{
+                    width: 100%;
+                }
+                h3{
+                    font-size: 24px;
+                    line-height: 32px;
+                    font-weight: bold;
+                }
+                .tecnologies{
+                    display: flex;
+                    gap: 18px;
+                    p{
+                        font-size: 18px;
+                        line-height: 28px;
+                        font-weight: 500;
+                    }
+                }
+                .options{
+                    display: flex;
+                    gap: 30px;
+                    .button{
+                        @include button;
+                    }
+                }
+            }
+            .gallery-show-case-desktop{
+                display: none;
+                @include breakpoint(desktopxl){
+                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .image-options-desktop{
+                        position: relative;
+                        .image-showcase-desktop{
+                            width: 100%;
+                        }
+                        .options{
+                            display: flex;
+                            gap: 30px;
+                            width: 100%;
+                            height: 100%;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 60px;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: rgba(0, 0, 0, 0.7);
+                            opacity: 0;
+                            transition: opacity 0.5s ease;
+                            &:hover{
+                                opacity: 1;
+                                cursor: pointer;
+                            }
+                            .button{
+                                @include button;
+                                &:hover{
+                                    color: $beig;
+                                }
+                            }
+                        }
+                    }
+                    h3{
+                        font-size: 24px;
+                        line-height: 32px;
+                        font-weight: bold;
+                    }
+                    .tecnologies{
+                        display: flex;
+                        gap: 18px;
+                        p{
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
