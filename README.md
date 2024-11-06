@@ -1,20 +1,22 @@
-# Diseño responsive - Demo Portfolio -
+# Demo portfolio
 
+###### Adapted from mobile devices to desktop in 1920px.
 
-# Tecnologias
+## Technologies used:
 - HTML
 - CSS
-- PREPROCESADOR -> SASS
+- SASS PREPROCESSOR
 
-## Diseño responsive para las siguientes dimensiones
-- 430px
-- 768px
-- 1024px
-- 1200px
-- 1440px
-- 1920px
+## How to use:
+<ol>
+    <li>Download the project in any way you choose.</li>
+    <li>Open it with your favorite code editor.</li>
+    <li>Open a terminal.</li>
+    <li>Install the dependencies you need.</li>
+    <li>Run the following command in your terminal: npm run dev.</li>
+    <li>Copy the link it provides you into your browser bar.</li>
+    <li>Ready!</li>
+</ol>
 
-
-
-### Contribución
-Cualquier sugerencia o problema que encuentres no dudes en compartirlo! Gracias!!
+## Contribution:
+If you have any suggestions or problems, don't hesitate to let me know! Thank you!!
