@@ -1,49 +1,40 @@
-@mixin breakpoint($bp) {
-  @if $bp == tablet {
-    @media (min-width: $bp-tablet) {
-      @content;
-    }
-  }
+@use "_variables" as var;
 
-  @if $bp == tablethorizontal {
-    @media (min-width: $bp-tablet-horizontal) {
-      @content;
-    }
-  }
 
-  @if $bp == desktop {
-    @media (min-width: $bp-desktop) {
-      @content;
+@mixin breakpoint($bp){
+    @if $bp == tablet{
+        @media (min-width: var.$bp-tablet){
+            @content;
+        }
     }
-  }
 
-  @if $bp == desktopxl {
-    @media (min-width: $bp-desktop-xl) {
-      @content;
+    @if $bp == tablethorizontal{
+        @media (min-width: var.$bp-tablet-horizontal){
+            @content;
+        }
     }
-  }
-  @if $bp == desktopxxl {
-    @media (min-width: $bp-desktop-xxl) {
-      @content;
+
+    @if $bp == desktop{
+        @media (min-width: var.$bp-desktop){
+            @content;
+        }
     }
-  }
+
+    @if $bp == desktopxl{
+        @media (min-width: var.$bp-desktop-xl){
+            @content;
+        }
+    }
+
+    @if $bp == desktopxxl{
+        @media (min-width: var.$bp-desktop-xxl){
+            @content;
+        }
+    }
 }
 
-//mixin de reset ul
 @mixin reset-list{
-  padding: 0px;
-  margin: 0px;
-  list-style: none;
-}
-
-//mixin de botones
-@mixin button {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 26px;
-  display: inline-block;
-  width: max-content;
-  padding-bottom: 10px;
-  border-bottom: 2px solid $beig;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }

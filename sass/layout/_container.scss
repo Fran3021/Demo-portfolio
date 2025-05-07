@@ -1,8 +1,33 @@
-.container{
-    max-width: 90%;
+@use '../abstracts/abstracts' as abs;
+@use '../base/base' as base;
+@use '../components/components' as comp;
+
+.container-header-principal{
+    max-width: 92%;
     margin-left: auto;
     margin-right: auto;
-    @include breakpoint(desktopxl){
-        max-width: 80%;
+    @include abs.breakpoint(desktopxl){
+        max-width: 1100px;
+        width: 100%;
+    }
+}
+
+.container-main-principal{
+    max-width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    @include abs.breakpoint(desktopxl){
+        max-width: 1100px;
+        width: 100%;
+    }
+}
+
+.container-footer-principal{
+    max-width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    @include abs.breakpoint(desktopxl){
+        max-width: 1100px;
+        width: 100%;
     }
 }

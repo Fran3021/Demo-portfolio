@@ -1,13 +1,13 @@
-html * {
-    font-family: $primary-font;
-    color: $white;
-}
+@use '../abstracts/abstracts' as abs;
+@use '../base/base' as base;
+@use '../components/components' as comp;
 
 body {
     overflow-x: hidden;
-    background-color:$black;
+    background-color: abs.$negro;
 }
 
-* ul{
-    @include reset-list;
+html *{
+    font-family: abs.$space-grotest;
+    color: abs.$blanco;
 }

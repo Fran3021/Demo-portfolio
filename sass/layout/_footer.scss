@@ -1,218 +1,206 @@
+@use '../abstracts/abstracts' as abs;
+@use '../base/base' as base;
+@use '../components/components' as comp;
+
+
 .footer-principal{
-    background-color: $dark-silver;
-    padding-top: 60px;
-    padding-bottom: 60px;
     position: relative;
-    .circle-footer{
+    padding-top: 60px;
+    background-color: abs.$gris-oscuro;
+    @include abs.breakpoint(desktopxl){
+        padding-top: 84px;
+    }
+    .circulos-footer-movil{
         position: absolute;
-        bottom: 33%;
-        @include breakpoint(tablet){
+        left: 0;
+        top: 52%;
+        @include abs.breakpoint(tablet){
             display: none;
         }
     }
-    .circle-footer-tablet{
+    .circulos-footer-tablet{
         display: none;
-        @include breakpoint(tablet){
-            display: block;
-            position: absolute;
-            bottom: 21%;
-        }
-        @include breakpoint(desktopxl){
-            display: none;
-        }
-    }
-    .circle-footer-desktop{
-        display: none;
-        @include breakpoint(desktopxl){
+        @include abs.breakpoint(tablet){
             display: block;
             position: absolute;
             left: 0;
-            bottom: 30%;
+            top: 67%;
+        }
+        @include abs.breakpoint(desktopxl){
+            display: none;
         }
     }
-    .formulario-footer{
-        @include breakpoint(tablet){
-            width: 65%;
-            margin-left: auto;
-            margin-right: auto;
+    .circulos-footer-desktop{
+        display: none;
+        @include abs.breakpoint(desktopxl){
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 52%;
         }
-        @include breakpoint(desktopxl){
-            width: 100%;
+    }
+    .container-footer-principal{
+        .formulario-contacto{
+            border-bottom: 1px solid abs.$blanco;
+            padding-bottom: 87px;
+            margin-bottom: 39px;
+            @include abs.breakpoint(tablet){
+                padding-bottom: 92px;
+                margin-bottom: 30px;
+            }
+            @include abs.breakpoint(desktopxl){
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 47px;
+            }
+            .contacto{
+                @include abs.breakpoint(desktopxl){
+                    width: 50%;
+                }
+                h3{
+                    font-size: 40px;
+                    text-align: center;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                    line-height: 40px;
+                    @include abs.breakpoint(tablet){
+                        font-size: 72px;
+                        line-height: 72px;
+                        letter-spacing: -2.05px;
+                    }
+                    @include abs.breakpoint(desktopxl){
+                        font-size: 88px;
+                        line-height: 88px;
+                        letter-spacing: -2.5px;
+                        text-align: left;
+                    }
+                }
+                p{
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: abs.$gris-claro;
+                    text-align: center;
+                    margin-bottom: 50px;
+                    line-height: 26px;
+                    @include abs.breakpoint(tablet){
+                        font-size: 18px;
+                        line-height: 28px;
+                        max-width: 445px;
+                        width: 100%;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    @include abs.breakpoint(desktopxl){
+                        text-align: left;
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+            }
+            .formulario{
+                display: flex;
+                flex-direction: column;
+                @include abs.breakpoint(tablet){
+                    max-width: 445px;
+                    width: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                @include abs.breakpoint(desktopxl){
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                input{
+                    outline: none;
+                    background-color: abs.$gris-oscuro;
+                    border: 0;
+                    border-bottom: 1px solid abs.$blanco;
+                    padding-left: 24px;
+                    padding-bottom: 16px;
+                    margin-bottom: 32px;
+                    &::placeholder{
+                        font-size: 16px;
+                        color: #919191;
+                        line-height: 26px;
+                    }
+                    &:focus{
+                        border-bottom: 1px solid abs.$verde-claro;
+                    }
+                }
+                .textarea{
+                    padding-left: 24px;
+                    padding-bottom: 80px;
+                    margin-bottom: 32px;
+                }
+                .email-input{
+                    position: relative;
+                    .email{
+                        width: 100%;
+                    }
+                    .icon-error-email{
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        display: none;
+                    }
+                    .mensaje-error-email{
+                        position: absolute;
+                        right: 0;
+                        bottom: 12px;
+                        font-size: 12px;
+                        line-height: 16px;
+                        color: #ff6f5b;
+                        display: none;
+                    }
+                    .invalid{
+                        border-bottom: 1px solid #ff6f5b;
+                    }
+                }
+                button{
+                    align-self: flex-end;
+                    width: max-content;
+                    background-color: abs.$gris-oscuro;
+                    border: 0;
+                    @include comp.boton;
+                }
+            }
+        }
+        .titulo-nav-footer{
             display: flex;
-            justify-content: space-between;
-            padding-top: 40px;
-        }
-        .contact{
-            text-align: center;
-            margin-bottom: 50px;
-            @include breakpoint(desktopxl){
-                width: 39%;
-                text-align: left;
-                margin-bottom: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: 60px;
+            @include abs.breakpoint(tablet){
+                padding-bottom: 40px;
+                gap: 0;
+                flex-direction: row;
+                justify-content: space-between;
             }
             h2{
-                font-size: 40px;
-                line-height: 40px;
+                font-size: 24px;
                 font-weight: bold;
-                margin-bottom: 20px;
-                @include breakpoint(tablet){
-                    font-size: 72px;
-                    line-height: 72px;
-                }
-                @include breakpoint(desktopxl){
-                    font-size: 88px;
-                    line-height: 88px;
-                    margin-bottom: 36px;
-                }
-            }
-            p{
-                font-size: 17px;
-                line-height: 26px;
-                font-weight: 500;
-                @include breakpoint(tablet){
-                    font-size: 18px;
-                    line-height: 28px;
-                }
-            }
-        }
-        .formulario{
-            padding-bottom: 87px;
-            border-bottom: 1px solid $white;
-            margin-bottom: 39px;
-            @include breakpoint(tablet){
-                border: 0;
-            }
-            @include breakpoint(desktopxl){
-                width: 41%;
-            }
-            .name{
-                width: 100%;
-                border: 0;
-                background-color: $dark-silver;
-                padding-bottom: 17px;
-                padding-left: 24px;
-                border-bottom: 1px solid $white;
-                margin-bottom: 32px;
-                &::placeholder{
-                    color: #919191;
-                    font-size: 16px;
-                    line-height: 26px;
-                    font-weight: 500;
-                }
-                &:focus{
-                    outline: none;
-                    border-bottom: 1px solid $beig;
-                }
-                @include breakpoint(desktopxl){
-                    &:focus{
-                        outline: none;
-                        border-bottom: 1px solid $beig;
-                    }
-                }
-            }
-            .email{
-                width: 100%;
-                border: 0;
-                background-color: $dark-silver;
-                padding-bottom: 17px;
-                padding-left: 24px;
-                border-bottom: 1px solid $white;
-                margin-bottom: 32px;
-                &::placeholder{
-                    color: #919191;
-                    font-size: 16px;
-                    line-height: 26px;
-                    font-weight: 500;
-                }
-                &:focus{
-                    outline: none;
-                    border-bottom: 1px solid $beig;
-                }
-                @include breakpoint(desktopxl){
-                    &:focus{
-                        outline: none;
-                        border-bottom: 1px solid $beig;
-                    }
-                }
-            }
-            .message{
-                width: 100%;
-                border: 0;
-                background-color: $dark-silver;
-                padding-bottom: 81px;
-                padding-left: 24px;
-                border-bottom: 1px solid $white;
-                margin-bottom: 32px;
-                &::placeholder{
-                    color: #919191;
-                    font-size: 16px;
-                    line-height: 26px;
-                    font-weight: 500;
-                }
-                &:focus{
-                    outline: none;
-                    border-bottom: 1px solid $beig;
-                }
-                @include breakpoint(desktopxl){
-                    &:focus{
-                        outline: none;
-                        border-bottom: 1px solid $beig;
-                    }
-                }
-            }
-            .container-submit{
-                display: flex;
-                justify-content: flex-end;
-                .button{
-                    background-color: $dark-silver;
-                    border: 0;
-                    font-size: 16px;
-                    line-height: 26px;
-                    color: $white;
-                    border-bottom: 2px solid $beig;
-                    padding-bottom: 10px;
-                    @include breakpoint(desktopxl){
-                        &:hover{
-                            color: $beig;
-                            cursor: pointer;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .socials-footer{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        @include breakpoint(tablet){
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            border-top: 1px solid $white;
-            padding-top: 30px;
-        }
-        @include breakpoint(desktop){
-            padding-top: 47px;
-        }
-        h3{
-            font-size: 24px;
-            line-height: 32px;
-            @include breakpoint(tablet){
-                font-size: 32px;
                 line-height: 32px;
+                @include abs.breakpoint(tablet){
+                    font-size: 32px;
+                    letter-spacing: -0.44px;
+                }
             }
-        }
-        nav{
-            ul{
-                display: flex;
-                gap: 25px;
-                img{
-                    @include breakpoint(desktop){
-                        width: 24px;
-                        height: 24px;
+            .menu-footer{
+                .menu-movil{
+                    display: flex;
+                    gap: 26px;
+                    @include abs.breakpoint(tablet){
+                        display: none;
+                    }
+                }
+                .menu-tablet{
+                    display: none;
+                    @include abs.breakpoint(tablet){
+                        display: flex;
+                        gap: 32px;
                     }
                 }
             }

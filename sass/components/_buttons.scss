@@ -1,0 +1,17 @@
+@use '../abstracts/abstracts' as abs;
+
+@mixin boton{
+    text-decoration: none;
+    border-bottom: 2px solid abs.$verde-claro;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    line-height: 26px;
+    width: max-content;
+    letter-spacing: 2.29px;
+    @include abs.breakpoint(desktopxl){
+        &:hover{
+            color: abs.$verde-claro;
+        }
+    }
+}
